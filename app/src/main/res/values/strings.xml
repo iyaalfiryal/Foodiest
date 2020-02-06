@@ -9,4 +9,43 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lable_store">Sydney CBD</string>
     <string name="lable_hint">Search for restaurant...</string>
+    <string name="lable_popular">Most Popular</string>
+    <string name="lable_see_all">See all</string>
+    <string name="lable_name">Name</string>
+    <string name="lable_address">Address</string>
+    <string name="lable_kind">Kind</string>
+    <string name="lable_meals_deal">Meals Deal</string>
+
+    <string-array name="data_name">
+        <item>Samgyetang</item>
+        <item>Kimchi Sop</item>
+        <item>Gudeg</item>
+        <item>Pempek</item>
+        <item>Sate Maranggi</item>
+        <item>Bakso</item>
+    </string-array>
+    <string-array name="data_address">
+        <item>Hanamdong Restaurant</item>
+        <item>Ilsan Kimchi Restaurant</item>
+        <item>Malioboro Street Food</item>
+        <item>Palembang SC Restaurant</item>
+        <item>Kuta Marriot Restaurant</item>
+        <item>Bakso Bodjangan Restaurant</item>
+    </string-array>
+    <string-array name="data_kind">
+        <item>Main Course</item>
+        <item>Main Course</item>
+        <item>Main Course</item>
+        <item>Appetizer</item>
+        <item>Main Course</item>
+        <item>Main Course</item>
+    </string-array>
+    <array name="data_photo">
+        <item>@drawable/pop_image_1</item>
+        <item>@drawable/pop_image_2</item>
+        <item>@drawable/pop_image_3</item>
+        <item>@drawable/pop_image_4</item>
+        <item>@drawable/pop_image_5</item>
+        <item>@drawable/pop_image_6</item>
+    </array>
 </resources>
