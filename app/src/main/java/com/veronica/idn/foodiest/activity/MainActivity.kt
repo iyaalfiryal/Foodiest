@@ -1,9 +1,10 @@
-package com.veronica.idn.foodiest
+package com.veronica.idn.foodiest.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.veronica.idn.foodiest.R
 import com.veronica.idn.foodiest.fragment.FavoriteFragment
 import com.veronica.idn.foodiest.fragment.HomeFragment
 import com.veronica.idn.foodiest.fragment.LocationFragment

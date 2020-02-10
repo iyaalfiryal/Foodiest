@@ -15,6 +15,7 @@
     <string name="lable_address">Address</string>
     <string name="lable_kind">Kind</string>
     <string name="lable_meals_deal">Meals Deal</string>
+    <string name="lable_description">Description</string>
 
     <string-array name="data_name">
         <item>Samgyetang</item>
@@ -23,6 +24,9 @@
         <item>Pempek</item>
         <item>Sate Maranggi</item>
         <item>Bakso</item>
+        <item>Ramen</item>
+        <item>Nasi Goreng</item>
+
     </string-array>
     <string-array name="data_address">
         <item>Hanamdong Restaurant</item>
@@ -31,12 +35,18 @@
         <item>Palembang SC Restaurant</item>
         <item>Kuta Marriot Restaurant</item>
         <item>Bakso Bodjangan Restaurant</item>
+        <item>Gokana Ramen and Teppan</item>
+        <item>Solaria</item>
+
+
     </string-array>
     <string-array name="data_kind">
         <item>Main Course</item>
         <item>Main Course</item>
         <item>Main Course</item>
         <item>Appetizer</item>
+        <item>Main Course</item>
+        <item>Main Course</item>
         <item>Main Course</item>
         <item>Main Course</item>
     </string-array>
@@ -47,5 +57,8 @@
         <item>@drawable/pop_image_4</item>
         <item>@drawable/pop_image_5</item>
         <item>@drawable/pop_image_6</item>
+        <item>@drawable/image_6</item>
+        <item>@drawable/image_7</item>
+
     </array>
 </resources>
