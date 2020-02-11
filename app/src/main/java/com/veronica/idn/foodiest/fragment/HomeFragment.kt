@@ -11,6 +11,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
+import com.veronica.idn.foodiest.DetailPopularFoodActivity
 import com.veronica.idn.foodiest.activity.AllPopulerActivity
 import com.veronica.idn.foodiest.model.Foods
 import com.veronica.idn.foodiest.adapter.PopularFoodAdapter
@@ -76,6 +77,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun showSelected(it: Foods) {
+        val page = Intent(context, DetailPopularFoodActivity::class.java)
+        page.putExtra(DetailPopularFoodActivity.KEY_POPULAR_FOOD, it)
+        startActivity(page)
 
     }
 
