@@ -1,9 +1,10 @@
-package com.veronica.idn.foodiest
+package com.veronica.idn.foodiest.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.veronica.idn.foodiest.R
 import com.veronica.idn.foodiest.model.Foods
 import kotlinx.android.synthetic.main.activity_detail_popular_food.*
 

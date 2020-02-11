@@ -16,6 +16,12 @@
     <string name="lable_kind">Kind</string>
     <string name="lable_meals_deal">Meals Deal</string>
     <string name="lable_description">Description</string>
+    <string name="lable_title_popular">Popular</string>
+    <string name="lable_category_cake">Cake</string>
+    <string name="lable_category_india_cussion">India Cussion</string>
+    <string name="lable_category_asian_cussion">Asian Cussion</string>
+    <string name="lable_category_chinese_cussion">Chinese Foods</string>
+    <string name="lable_category_vegan">Vegetarian</string>
 
     <string-array name="data_name">
         <item>Samgyetang</item>

@@ -11,7 +11,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
-import com.veronica.idn.foodiest.DetailPopularFoodActivity
+import com.veronica.idn.foodiest.activity.DetailPopularFoodActivity
 import com.veronica.idn.foodiest.activity.AllPopulerActivity
 import com.veronica.idn.foodiest.model.Foods
 import com.veronica.idn.foodiest.adapter.PopularFoodAdapter

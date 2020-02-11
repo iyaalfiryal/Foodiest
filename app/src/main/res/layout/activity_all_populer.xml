@@ -1,15 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/_16dp"
+    android:layout_marginEnd="@dimen/_16dp"
     tools:context=".activity.AllPopulerActivity">
 
+    <TextView
+        android:id="@+id/tv_title_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/lable_title_popular"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_24sp" />
+
+    <ImageView
+        android:id="@+id/iv_home"
+        android:layout_width="@dimen/_30dp"
+        android:layout_height="@dimen/_30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_16dp"
+        android:src="@drawable/ic_home" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_popular"
+        android:layout_marginTop="@dimen/_20dp"
+        android:scrollbars="none"
+        android:id="@+id/hs_category">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sp"
+                android:text="@string/lable_category_cake"
+                android:id="@+id/tv_category_cake"
+                android:textColor="@android:color/white"
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sp"
+                android:text="@string/lable_category_india_cussion"
+                android:id="@+id/tv_category_india_cussion"
+                android:textColor="@android:color/white"
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sp"
+                android:text="@string/lable_category_asian_cussion"
+                android:id="@+id/tv_category_asian_cussion"
+                android:textColor="@android:color/white"
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sp"
+                android:text="@string/lable_category_chinese_cussion"
+                android:id="@+id/tv_category_chinese_cussion"
+                android:textColor="@android:color/white"
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sp"
+                android:text="@string/lable_category_vegan"
+                android:id="@+id/tv_category_vegan"
+                android:textColor="@android:color/white"
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_16dp"/>
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_all_popular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rv_all_popular"/>
+        android:layout_below="@id/hs_category"
+        android:layout_marginTop="@dimen/_16dp" />
 
 </RelativeLayout>

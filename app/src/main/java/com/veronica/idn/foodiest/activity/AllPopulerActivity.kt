@@ -19,6 +19,7 @@ class AllPopulerActivity : AppCompatActivity() {
         listFood.addAll(getListFood())
         supportActionBar?.hide()
         showRecyclerGrid()
+
     }
     fun getListFood(): ArrayList<Foods> {
         val dataName = resources.getStringArray(R.array.data_name)
