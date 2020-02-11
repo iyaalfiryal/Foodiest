@@ -24,4 +24,9 @@
     <dimen name="_12sp">12sp</dimen>
     <dimen name="_30dp">30dp</dimen>
     <dimen name="_10dp">10dp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="_350dp">350dp</dimen>
+    <dimen name="_320dp">320dp</dimen>
+    <dimen name="_330dp">330dp</dimen>
+    <dimen name="_340dp">340dp</dimen>
 </resources>
