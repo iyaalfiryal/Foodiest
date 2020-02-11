@@ -21,10 +21,12 @@ class AllPopulerActivity : AppCompatActivity() {
         showRecyclerGrid()
 
     }
+
     fun getListFood(): ArrayList<Foods> {
         val dataName = resources.getStringArray(R.array.data_name)
         val dataAddress = resources.getStringArray(R.array.data_address)
         val dataKind = resources.getStringArray(R.array.data_kind)
+        val dataDesc = resources.getStringArray(R.array.data_desc)
         val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
 
         val listFood = ArrayList<Foods>()
@@ -33,6 +35,7 @@ class AllPopulerActivity : AppCompatActivity() {
                 dataName[position],
                 dataAddress[position],
                 dataKind[position],
+                dataDesc[position],
                 dataPhoto.getResourceId(position, -1)
             )
             listFood.add(food)
@@ -41,7 +44,7 @@ class AllPopulerActivity : AppCompatActivity() {
     }
 
     private fun showRecyclerGrid() {
-        val layoutManagerStaggered = StaggeredGridLayoutManager(2,GridLayoutManager.VERTICAL)
+        val layoutManagerStaggered = StaggeredGridLayoutManager(2, GridLayoutManager.VERTICAL)
         rv_all_popular.layoutManager = layoutManagerStaggered
         rv_all_popular.adapter = StaggeredAdapter(listFood)
     }

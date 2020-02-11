@@ -88,6 +88,7 @@ class HomeFragment : Fragment() {
         val dataAddress = resources.getStringArray(R.array.data_address)
         val dataKind = resources.getStringArray(R.array.data_kind)
         val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
+        val dataDesc = resources.getStringArray(R.array.data_desc)
 
         val listFood = ArrayList<Foods>()
         for (position in dataName.indices) {
@@ -95,6 +96,7 @@ class HomeFragment : Fragment() {
                 dataName[position],
                 dataAddress[position],
                 dataKind[position],
+                dataDesc[position],
                 dataPhoto.getResourceId(position, -1)
             )
             listFood.add(food)

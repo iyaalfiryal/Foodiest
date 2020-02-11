@@ -34,8 +34,12 @@ class StaggeredAdapter(private val listStaggered: ArrayList<Foods>) :RecyclerVie
                     .apply(RequestOptions().override(900))
                     .into(iv_staggered_food)
 
-//                tv_staggered_name_food.setText(foods.name)
+
                 tv_staggered_name_food.text = foods.name
+                tv_staggered_kind_food.text = foods.kind
+                tv_staggered_address_food.text = foods.address
+                tv_staggered_desc_food.text = foods.des
+
             }
 
         }

@@ -8,6 +8,7 @@ data class Foods(
     var name: String,
     var address: String,
     var kind: String,
+    var des : String,
     var images: Int
 
 ) : Parcelable
