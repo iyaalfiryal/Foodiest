@@ -10,7 +10,16 @@ import com.veronica.idn.foodiest.R
 import com.veronica.idn.foodiest.model.Foods
 import kotlinx.android.synthetic.main.item_row.view.*
 
-class PopularFoodAdapter (private val listFoods : ArrayList<Foods>) : RecyclerView.Adapter<PopularFoodAdapter.PopularViewHolder>() {
+class PopularFoodAdapter(private val listener: (Foods) -> Unit) :
+    RecyclerView.Adapter<PopularFoodAdapter.PopularViewHolder>() {
+    private val listFoods = ArrayList<Foods>()
+
+    fun setData(items: ArrayList<Foods>) {
+        listFoods.clear()
+        listFoods.addAll(items)
+        notifyDataSetChanged()
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -21,12 +30,12 @@ class PopularFoodAdapter (private val listFoods : ArrayList<Foods>) : RecyclerVi
     override fun getItemCount(): Int = listFoods.size
 
     override fun onBindViewHolder(holder: PopularViewHolder, position: Int) {
-        holder.bind(listFoods[position])
+        holder.bind(listFoods[position], listener)
     }
 
     class PopularViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind (foods: Foods){
-            with(itemView){
+        fun bind(foods: Foods, listener: (Foods) -> Unit) {
+            with(itemView) {
                 Glide.with(itemView.context).load(foods.images)
                     .apply(RequestOptions().override(100))
                     .into(iv_popular)
@@ -34,6 +43,8 @@ class PopularFoodAdapter (private val listFoods : ArrayList<Foods>) : RecyclerVi
                 tv_name_restaurant.setText(foods.name)
                 tv_address.setText(foods.address)
                 tv_kind.setText(foods.kind)
+
+                itemView.setOnClickListener { listener(foods) }
 
             }
         }

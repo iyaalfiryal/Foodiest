@@ -4,7 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
     tools:context=".fragment.HomeFragment">
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/app_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        android:theme="">-->
+
+
+<!--        <android.support.design.widget.CollapsingToolbarLayout-->
+<!--            android:id="@+id/toolbar_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            app:contentScrim="?android:attr/colorPrimary"-->
+<!--            app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
+
+<!--            <android.support.v7.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="56dp"-->
+<!--                app:layout_collapseMode="pin"-->
+
+<!--                app:popupTheme="@style/AppTheme.PopupOverlay">-->
+
+<!--            </android.support.v7.widget.Toolbar>-->
+
+
+<!--        </android.support.design.widget.CollapsingToolbarLayout>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <RelativeLayout
         android:layout_width="match_parent"

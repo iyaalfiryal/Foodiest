@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class HomeFragment : Fragment() {
 
     private val foodList = ArrayList<Foods>()
+    private lateinit var popularFoodAdapter: PopularFoodAdapter
 
 
     companion object {
@@ -63,8 +64,6 @@ class HomeFragment : Fragment() {
         carouselView.setImageListener(imageContentListener)
         carouselView.setPageCount(imageContentSlider.count())
 
-        rv_popular.setHasFixedSize(true)
-        foodList.addAll(getListFood())
 
         showRecyclerList()
 
@@ -73,6 +72,10 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+
+    }
+
+    private fun showSelected(it: Foods) {
 
     }
 
@@ -96,10 +99,13 @@ class HomeFragment : Fragment() {
     }
 
     private fun showRecyclerList() {
-
+        popularFoodAdapter = PopularFoodAdapter { showSelected(it) }
+        popularFoodAdapter.notifyDataSetChanged()
+        popularFoodAdapter.setData(getListFood())
+        rv_popular.setHasFixedSize(true)
         rv_popular.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        rv_popular.adapter = PopularFoodAdapter(foodList)
+        rv_popular.adapter = popularFoodAdapter
 
     }
 }
