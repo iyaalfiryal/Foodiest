@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/_16dp"
+    android:scrollbars="none"
     tools:context=".activity.DetailPopularFoodActivity">
 
     <RelativeLayout
@@ -100,7 +101,7 @@
             android:layout_marginTop="@dimen/_24dp"
             android:text="@string/lable_name"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/_26sp" />
+            android:textSize="@dimen/_30sp" />
 
 
         <TextView
@@ -169,6 +170,49 @@
             android:layout_toEndOf="@id/tv_lable_desc_food"
             android:text="@string/lable_description"
             android:textSize="@dimen/_12sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_desc_food_detail"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:text="@string/lable_price"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_oder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_desc_food_detail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:paddingStart="@dimen/_8dp"
+            android:paddingEnd="@dimen/_8dp"
+            android:text="@string/lable_order"
+            android:textSize="@dimen/_16sp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_desc_food_detail"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:background="@android:color/white"
+            android:layout_toStartOf="@id/btn_oder"
+            android:paddingStart="@dimen/_8dp"
+            android:paddingEnd="@dimen/_8dp"
+            android:text="@string/lable_visit"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray" />
 
 
     </RelativeLayout>

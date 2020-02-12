@@ -23,6 +23,9 @@
     <string name="lable_category_chinese_cussion">Chinese Foods</string>
     <string name="lable_category_vegan">Vegetarian</string>
     <string name="lable_rating">Rating</string>
+    <string name="lable_price">Price</string>
+    <string name="lable_order">Order Now</string>
+    <string name="lable_visit">Visit Us</string>
 
     <string-array name="data_name">
         <item>Samgyetang</item>
