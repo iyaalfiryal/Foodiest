@@ -30,4 +30,9 @@
     <dimen name="_330dp">330dp</dimen>
     <dimen name="_340dp">340dp</dimen>
     <dimen name="_26sp">26sp</dimen>
+    <dimen name="_32dp">32dp</dimen>
+    <dimen name="_14dp">14dp</dimen>
+    <dimen name="_11dp">11dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+    <dimen name="_22dp">22dp</dimen>
 </resources>

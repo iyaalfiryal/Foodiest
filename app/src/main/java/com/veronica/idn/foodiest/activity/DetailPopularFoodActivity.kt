@@ -19,12 +19,17 @@ class DetailPopularFoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_popular_food)
+
+        supportActionBar?.hide()
         foods = intent.getParcelableExtra(KEY_POPULAR_FOOD)
 
         tv_name_detail_popular.text = foods?.name
-        tv_desc_detail_popular.text = foods?.kind
+        tv_name_detail_in_popular.text = foods?.name
+        tv_kind_food_detail.text = foods?.kind
+        tv_address_food_detail.text = foods?.address
+        tv_desc_food_detail.text = foods?.des
         Glide.with(this).load(foods?.images)
-            .apply(RequestOptions().override(500))
+            .apply(RequestOptions().override(900, 500))
             .into(iv_image_detail_popular)
 
     }

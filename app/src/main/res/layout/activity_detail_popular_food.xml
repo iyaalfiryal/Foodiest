@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_16dp"
     tools:context=".activity.DetailPopularFoodActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_16dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/iv_backstage"
@@ -33,15 +33,15 @@
 
         <FrameLayout
             android:id="@+id/fm_detail_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@id/iv_backstage"
             android:foreground="@drawable/top_background">
 
             <ImageView
                 android:id="@+id/iv_image_detail_popular"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_300dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_16dp"
                 android:scaleType="fitXY"
@@ -102,7 +102,75 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/_26sp" />
 
-     
+
+        <TextView
+            android:id="@+id/tv_lable_kind_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_detail_in_popular"
+            android:layout_marginTop="@dimen/_18dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:text="@string/lable_kind"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sp" />
+
+        <TextView
+            android:id="@+id/tv_kind_food_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_detail_in_popular"
+            android:layout_marginStart="@dimen/_22dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_toEndOf="@id/tv_lable_kind_food"
+            android:text="@string/lable_kind"
+            android:textSize="@dimen/_12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_lable_address_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_lable_kind_food"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_14dp"
+            android:text="@string/lable_address"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sp" />
+
+        <TextView
+            android:id="@+id/tv_address_food_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_kind_food_detail"
+            android:layout_marginStart="@dimen/_18dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_toEndOf="@id/tv_lable_address_food"
+            android:text="@string/lable_address"
+            android:textSize="@dimen/_12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_lable_desc_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_address_food_detail"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:text="@string/lable_description"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sp" />
+
+        <TextView
+            android:id="@+id/tv_desc_food_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_address_food_detail"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_toEndOf="@id/tv_lable_desc_food"
+            android:text="@string/lable_description"
+            android:textSize="@dimen/_12sp" />
+
+
     </RelativeLayout>
 
 </ScrollView>
