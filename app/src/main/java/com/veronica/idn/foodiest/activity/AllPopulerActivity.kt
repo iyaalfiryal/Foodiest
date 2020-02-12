@@ -28,6 +28,7 @@ class AllPopulerActivity : AppCompatActivity() {
         val dataKind = resources.getStringArray(R.array.data_kind)
         val dataDesc = resources.getStringArray(R.array.data_desc)
         val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
+        val dataPrice = resources.getStringArray(R.array.data_price)
 
         val listFood = ArrayList<Foods>()
         for (position in dataName.indices) {
@@ -36,6 +37,7 @@ class AllPopulerActivity : AppCompatActivity() {
                 dataAddress[position],
                 dataKind[position],
                 dataDesc[position],
+                dataPrice[position],
                 dataPhoto.getResourceId(position, -1)
             )
             listFood.add(food)

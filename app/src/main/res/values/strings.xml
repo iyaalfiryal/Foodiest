@@ -35,6 +35,17 @@
         <item>Nasi Goreng</item>
     </string-array>
 
+    <string-array name="data_price">
+        <item>Rp 500.000,-</item>
+        <item>Rp 80.000,-</item>
+        <item>Rp 20.000,-</item>
+        <item>Rp 10.000,-</item>
+        <item>Rp 150.000,-</item>
+        <item>Rp 15.000,-</item>
+        <item>Rp 5.000,-</item>
+        <item>Rp 12.000,-</item>
+    </string-array>
+
     <string-array name="data_desc">
         <item>Samgyetang adalah sup berisi ayam muda dalam keadaan utuh yang direbus dengan api kecil selama 2–3 jam hingga empuk.</item>
         <item>Menu yang satu ini memiliki rasa yang unik. Pedas, asam dan sangat menggugah selera. Di Korea Selatan, menu ini sangat populer. Sayur sawi putih yang diasinkan kemudian dicampur dengan bumbu dan saus khas Korea.</item>
