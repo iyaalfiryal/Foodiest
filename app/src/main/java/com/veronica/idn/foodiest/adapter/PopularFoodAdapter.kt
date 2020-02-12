@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.item_row.view.*
 
 class PopularFoodAdapter(private val listener: (Foods) -> Unit) :
     RecyclerView.Adapter<PopularFoodAdapter.PopularViewHolder>() {
+
     private val listFoods = ArrayList<Foods>()
 
     fun setData(items: ArrayList<Foods>) {

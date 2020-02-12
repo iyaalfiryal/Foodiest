@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
  */
 class HomeFragment : Fragment() {
 
-    private val foodList = ArrayList<Foods>()
+//    private val foodList = ArrayList<Foods>()
     private lateinit var popularFoodAdapter: PopularFoodAdapter
 
 
@@ -64,10 +64,7 @@ class HomeFragment : Fragment() {
         val carouselView = is_main as CarouselView
         carouselView.setImageListener(imageContentListener)
         carouselView.setPageCount(imageContentSlider.count())
-
-
         showRecyclerList()
-
         tv_see_all.setOnClickListener {
             val intent = Intent(context, AllPopulerActivity::class.java)
             startActivity(intent)

@@ -33,8 +33,6 @@
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
                     android:src="@drawable/pop_image_6" />
-
-
             </FrameLayout>
 
             <TextView
@@ -49,18 +47,6 @@
                 android:textSize="@dimen/_14sp"
                 android:textStyle="bold" />
         </FrameLayout>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/tv_staggered_address_food_title"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/_16dp"
-            android:layout_marginEnd="@dimen/_16dp"
-            app:backgroundTint="@color/colorPrimary"
-            app:fabSize="mini"
-            app:layout_anchor="@id/fm_staggered"
-            app:srcCompat="@drawable/ic_favorite_border_white" />
 
 
         <TextView
@@ -93,8 +79,8 @@
             android:layout_below="@id/tv_staggered_desc_food_title"
             android:layout_marginStart="@dimen/_16dp"
             android:layout_marginEnd="@dimen/_16dp"
-            android:maxLines="2"
             android:ellipsize="end"
+            android:maxLines="2"
             android:text="@string/lable_description"
             android:textSize="@dimen/_10sp" />
 
@@ -119,6 +105,17 @@
             android:text="@string/lable_address"
             android:textColor="@android:color/black"
             android:textSize="@dimen/_10sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_staggered_address_food_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_16dp"
+            app:backgroundTint="@color/colorPrimary"
+            app:fabSize="mini"
+            app:layout_anchor="@id/fm_staggered"
+            app:srcCompat="@drawable/ic_favorite_border_white" />
 
 
     </RelativeLayout>

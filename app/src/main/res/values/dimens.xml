@@ -29,4 +29,5 @@
     <dimen name="_320dp">320dp</dimen>
     <dimen name="_330dp">330dp</dimen>
     <dimen name="_340dp">340dp</dimen>
+    <dimen name="_26sp">26sp</dimen>
 </resources>

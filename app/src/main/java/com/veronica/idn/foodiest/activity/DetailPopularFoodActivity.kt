@@ -23,7 +23,8 @@ class DetailPopularFoodActivity : AppCompatActivity() {
 
         tv_name_detail_popular.text = foods?.name
         tv_desc_detail_popular.text = foods?.kind
-        Glide.with(this).load(foods?.images).apply(RequestOptions().override(500))
+        Glide.with(this).load(foods?.images)
+            .apply(RequestOptions().override(500))
             .into(iv_image_detail_popular)
 
     }

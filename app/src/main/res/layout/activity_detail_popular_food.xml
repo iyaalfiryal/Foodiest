@@ -1,73 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     tools:context=".activity.DetailPopularFoodActivity">
 
-    <LinearLayout
-        android:layout_width="@dimen/_200dp"
-        android:layout_height="@dimen/_300dp"
-        android:layout_margin="@dimen/_16dp"
-        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp">
 
         <ImageView
-            android:id="@+id/iv_image_detail_popular"
-            android:layout_width="@dimen/_200dp"
-            android:layout_height="@dimen/_100dp"
-            android:layout_gravity="center"
-            android:scaleType="fitXY"
-            android:src="@drawable/pop_image_6" />
+            android:id="@+id/iv_backstage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
+        <TextView
+            android:id="@+id/tv_name_detail_popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_backstage"
+            android:text="@string/lable_name"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_24sp"
+            android:textStyle="bold" />
+
 
         <FrameLayout
-            android:id="@+id/fm_detail_popular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/fm_detail_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_backstage"
+            android:foreground="@drawable/top_background">
 
-            <LinearLayout
+            <ImageView
+                android:id="@+id/iv_image_detail_popular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_name_detail_popular"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16dp"
-                    android:gravity="center"
-                    android:text="@string/lable_name"
-                    android:textSize="@dimen/_18sp"
-                    android:textStyle="bold" />
-
-                <RatingBar
-                    android:id="@+id/rt_bar_detail_popular"
-                    style="@style/Widget.AppCompat.RatingBar.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="@dimen/_20dp"
-                    android:layout_marginEnd="16dp"
-                    android:numStars="5"
-                    android:rating="3" />
-            </LinearLayout>
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/pop_image_6" />
         </FrameLayout>
 
         <TextView
-            android:id="@+id/tv_kind_detail_popular"
-            android:layout_width="match_parent"
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/lable_kind"
-            android:textSize="@dimen/_12sp" />
+            android:layout_below="@id/fm_detail_image"
+            android:layout_marginTop="@dimen/_16dp"
+            android:text="@string/lable_rating"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/_12sp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/rt_bar_detail_popular"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fm_detail_image"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@id/tv_rating"
+            android:numStars="5"
+            android:rating="3" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_fav_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_name_detail_in_popular"
+            android:layout_toStartOf="@id/fb_exit_detail"
+            android:src="@drawable/ic_favorite_border_white"
+            app:layout_anchor="@id/fm_detail_image" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_exit_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_name_detail_in_popular"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:src="@drawable/ic_close_white"
+            app:layout_anchor="@id/fm_detail_image" />
 
         <TextView
-            android:id="@+id/tv_desc_detail_popular"
-            android:layout_width="match_parent"
+            android:id="@+id/tv_name_detail_in_popular"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16dp"
-            android:text="@string/lable_description"
-            android:textSize="@dimen/_14sp" />
-    </LinearLayout>
+            android:layout_below="@id/tv_rating"
+            android:layout_marginTop="@dimen/_24dp"
+            android:text="@string/lable_name"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_26sp" />
 
-</LinearLayout>
+     
+    </RelativeLayout>
+
+</ScrollView>
