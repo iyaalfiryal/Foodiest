@@ -1,5 +1,6 @@
 package com.veronica.idn.foodiest.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -8,6 +9,7 @@ import com.veronica.idn.foodiest.R
 import com.veronica.idn.foodiest.adapter.StaggeredAdapter
 import com.veronica.idn.foodiest.model.Foods
 import kotlinx.android.synthetic.main.activity_all_populer.*
+import kotlinx.android.synthetic.main.activity_detail_popular_food.*
 
 class AllPopulerActivity : AppCompatActivity() {
     private val listFood = ArrayList<Foods>()
@@ -19,7 +21,15 @@ class AllPopulerActivity : AppCompatActivity() {
         listFood.addAll(getListFood())
         supportActionBar?.hide()
         showRecyclerGrid()
+        backstageFun()
 
+    }
+
+    private fun backstageFun() {
+        iv_home.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun getListFood(): ArrayList<Foods> {

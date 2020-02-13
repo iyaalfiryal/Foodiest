@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCPy5d7fVtJN9U0cUM2Cj9i5_DNWG-9WtQ"/>
+            android:value="------------------------------"/>
+
         <activity android:name=".activity.DetailPopularFoodActivity"></activity>
         <activity android:name=".activity.AllPopulerActivity" />
         <activity android:name=".activity.MainActivity">

@@ -44,7 +44,6 @@
                 android:id="@+id/iv_image_detail_popular"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_300dp"
-                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_16dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/pop_image_6" />
