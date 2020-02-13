@@ -1,10 +1,12 @@
 package com.veronica.idn.foodiest.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.veronica.idn.foodiest.R
+import com.veronica.idn.foodiest.fragment.HomeFragment
 import com.veronica.idn.foodiest.model.Foods
 import kotlinx.android.synthetic.main.activity_detail_popular_food.*
 
@@ -21,6 +23,21 @@ class DetailPopularFoodActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_popular_food)
 
         supportActionBar?.hide()
+
+        fetchData()
+        backStage()
+
+    }
+
+    private fun backStage() {
+
+        iv_backstage.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun fetchData() {
         foods = intent.getParcelableExtra(KEY_POPULAR_FOOD)
 
         tv_name_detail_popular.text = foods?.name
@@ -32,6 +49,7 @@ class DetailPopularFoodActivity : AppCompatActivity() {
         Glide.with(this).load(foods?.images)
             .apply(RequestOptions().override(900, 500))
             .into(iv_image_detail_popular)
-
     }
+
+
 }
