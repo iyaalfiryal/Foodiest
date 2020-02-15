@@ -23,6 +23,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.veronica.idn.foodiest.R
+import com.veronica.idn.foodiest.model.Foods
 import kotlinx.android.synthetic.main.fragment_location.*
 
 /**
@@ -50,12 +51,14 @@ class LocationFragment : Fragment(), OnMapReadyCallback {
     }
 
 
+
+
     override fun onMapReady(p0: GoogleMap?) {
         mapView = p0!!
         val idn = LatLng(-6.174760, 106.827070)
 
-        mapView.addMarker(MarkerOptions().position(idn).title("Ini Indonesia"))
-        mapView.moveCamera(CameraUpdateFactory.newLatLng(idn))
+        mapView.addMarker(MarkerOptions().position(idn).title("Ini Indonesia")).showInfoWindow()
+        mapView.moveCamera(CameraUpdateFactory.newLatLngZoom(idn, 16.0f))
 
     }
 }
