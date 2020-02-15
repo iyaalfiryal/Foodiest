@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.location.Location
 import android.os.Bundle
 import android.util.Log
 import android.util.Size
@@ -24,12 +25,15 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.veronica.idn.foodiest.R
 import com.veronica.idn.foodiest.model.Foods
+import com.veronica.idn.foodiest.model.Locations
 import kotlinx.android.synthetic.main.fragment_location.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class LocationFragment : Fragment(), OnMapReadyCallback {
+    private val locations = ArrayList<Locations>()
+
     private lateinit var mapView: GoogleMap
 
     companion object {
@@ -57,8 +61,10 @@ class LocationFragment : Fragment(), OnMapReadyCallback {
         mapView = p0!!
         val idn = LatLng(-6.174760, 106.827070)
 
-        mapView.addMarker(MarkerOptions().position(idn).title("Ini Indonesia")).showInfoWindow()
+        mapView.addMarker(MarkerOptions().position(idn).title("Ini Indonesia").icon(
+            BitmapDescriptorFactory.fromResource(R.drawable.store))).showInfoWindow()
         mapView.moveCamera(CameraUpdateFactory.newLatLngZoom(idn, 16.0f))
+        mapView.animateCamera(CameraUpdateFactory.newLatLngZoom(idn, 16.0f))
 
     }
 }
