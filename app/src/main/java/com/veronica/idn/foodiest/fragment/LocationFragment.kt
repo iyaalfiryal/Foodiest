@@ -19,10 +19,7 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.google.android.gms.maps.*
-import com.google.android.gms.maps.model.BitmapDescriptor
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 import com.veronica.idn.foodiest.R
 import com.veronica.idn.foodiest.model.Foods
 import com.veronica.idn.foodiest.model.Locations
@@ -54,15 +51,37 @@ class LocationFragment : Fragment(), OnMapReadyCallback {
         return view
     }
 
+    fun getListLocation(): ArrayList<Locations> {
+        val dataTitle = resources.getStringArray(R.array.title)
+        val dataLat = resources.getStringArray(R.array.lat)
+        val dataLng = resources.getStringArray(R.array.lng)
 
+
+        val listLocation = ArrayList<Locations>()
+        for (position in dataTitle.indices) {
+            val loc = Locations(
+                dataTitle[position],
+                dataLat[position].toDouble(),
+                dataLng[position].toDouble()
+
+            )
+            listLocation.add(loc)
+        }
+        return listLocation
+    }
 
 
     override fun onMapReady(p0: GoogleMap?) {
         mapView = p0!!
         val idn = LatLng(-6.174760, 106.827070)
 
-        mapView.addMarker(MarkerOptions().position(idn).title("Ini Indonesia").icon(
-            BitmapDescriptorFactory.fromResource(R.drawable.store))).showInfoWindow()
+
+
+        mapView.addMarker(
+            MarkerOptions().position(idn).title("IDN").icon(
+                BitmapDescriptorFactory.fromResource(R.drawable.store)
+            )
+        ).showInfoWindow()
         mapView.moveCamera(CameraUpdateFactory.newLatLngZoom(idn, 16.0f))
         mapView.animateCamera(CameraUpdateFactory.newLatLngZoom(idn, 16.0f))
 

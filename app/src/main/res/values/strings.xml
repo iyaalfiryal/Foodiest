@@ -48,6 +48,22 @@
         <item>Rp 5.000,-</item>
         <item>Rp 12.000,-</item>
     </string-array>
+    <string-array name="title">
+        <item>Bakmi Gading Permai</item>
+        <item>Talaga Sampireun  Ancol</item>
+        <item>HOLYWINGS GROUND</item>
+    </string-array>
+    <string-array name="lat">
+        <item>-6.1501371</item>
+        <item>-6.2041305</item>
+        <item>-6.1782203</item>
+    </string-array>
+    <string-array name="lng">
+        <item>106.9074604</item>
+        <item>106.7108577</item>
+        <item>106.7782255</item>
+    </string-array>
+
 
     <string-array name="data_desc">
         <item>Samgyetang adalah sup berisi ayam muda dalam keadaan utuh yang direbus dengan api kecil selama 2–3 jam hingga empuk.</item>
