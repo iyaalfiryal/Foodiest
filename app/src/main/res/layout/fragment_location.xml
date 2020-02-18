@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".fragment.LocationFragment">
 
+
     <fragment
         android:id="@+id/fragment_location"
         android:name="com.google.android.gms.maps.SupportMapFragment"
