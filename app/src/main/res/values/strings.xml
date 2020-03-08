@@ -26,6 +26,7 @@
     <string name="lable_price">Price</string>
     <string name="lable_order">Order Now</string>
     <string name="lable_visit">Visit Us</string>
+    <string name="lable_meals_seafood">Seafood</string>
 
     <string-array name="data_name">
         <item>Samgyetang</item>
